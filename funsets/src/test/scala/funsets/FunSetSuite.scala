@@ -122,5 +122,13 @@ class FunSetSuite extends FunSuite {
         }
     }
 
+  test("forall works...") {
+    new TestSets{
+      val u = union(s1, s2)
+
+      assert(forall(u, (x: Int) => x < 3), "all less than 3")
+    }
+  }
+
 
 }
