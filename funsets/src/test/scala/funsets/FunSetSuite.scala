@@ -130,5 +130,13 @@ class FunSetSuite extends FunSuite {
     }
   }
 
+  test("exists works...") {
+    new TestSets{
+      val u = union(union(s1, s2), s3)
+
+      assert(exists(u, (x: Int) => x > 2), "exists one greater than 2")
+    }
+  }
+
 
 }
