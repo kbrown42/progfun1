@@ -138,5 +138,12 @@ class FunSetSuite extends FunSuite {
     }
   }
 
+  test("map works...") {
+    new TestSets {
+      val u = union(union(s1, s2), s3)
+      assert(contains(map(u, (x: Int) => x * x), 4), "map words on 1 2 3")
+    }
+  }
+
 
 }
